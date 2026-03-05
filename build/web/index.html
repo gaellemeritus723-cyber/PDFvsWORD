@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenue sur DocConvert Pro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --primary-dark: #4338ca;
+            --bg: #ffffff;
+            --text: #111827;
+            --text-light: #6b7280;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            margin: 0;
+            background-color: var(--bg);
+            color: var(--text);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .hero {
+            max-width: 700px;
+            padding: 2rem;
+        }
+
+        .badge {
+            background: #f3f4ff;
+            color: var(--primary);
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+        }
+
+        p {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: 2.5rem;
+        }
+
+        .instruction-box {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            margin-bottom: 2.5rem;
+            font-size: 0.95rem;
+            color: var(--text);
+        }
+
+        .btn-start {
+            background-color: var(--primary);
+            color: white;
+            padding: 1.2rem 2.5rem;
+            border-radius: 0.75rem;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.3);
+            display: inline-block;
+        }
+
+        .btn-start:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 20px 25px -5px rgba(79, 70, 229, 0.4);
+        }
+
+        .footer-note {
+            margin-top: 3rem;
+            font-size: 0.8rem;
+            color: #9ca3af;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <div class="badge">Nouveau en 2026</div>
+        <h1>Transformez vos documents avec précision.</h1>
+        <p>
+            La solution intelligente pour convertir vos PDF en Excel ou Word, 
+            et vos documents Word en PDF en quelques secondes.
+        </p>
+
+        <div class="instruction-box">
+            <strong>💡 Instruction :</strong> Cliquez sur le bouton ci-dessous pour accéder à notre interface sécurisée, puis glissez votre fichier pour lancer le traitement automatique.
+        </div>
+
+        <a href="covertpdf.jsp" class="btn-start">Accéder au convertisseur →</a>
+
+        <div class="footer-note">
+            Propulsé par Java, PDFBox 3.0.6 et Apache POI.
+        </div>
+    </div>
+
+</body>
+</html>

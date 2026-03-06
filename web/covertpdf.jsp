@@ -56,9 +56,9 @@
 
             <div id="shareSection" class="action-buttons">
                 <p style="width: 100%; font-weight: bold; margin-bottom: 5px;">Résultat :</p>
-                <a href="#" id="dlLink" class="btn-share download" download>📥 Télécharger</a>
-                <a href="#" id="waLink" class="btn-share whatsapp" target="_blank">💬 WhatsApp</a>
-                <a href="#" id="tgLink" class="btn-share telegram" target="_blank">✈️ Telegram</a>
+                <a href="#" id="dlLink" class="btn-share download" download> Télécharger</a>
+                <a href="#" id="waLink" class="btn-share whatsapp" target="_blank"> WhatsApp</a>
+                <a href="#" id="tgLink" class="btn-share telegram" target="_blank">️ Telegram</a>
             </div>
         </aside>
 
@@ -203,10 +203,18 @@
                 dlLink.setAttribute('download', dlName);
 
                 // WhatsApp & Telegram : partage du lien de la page (fichier local non partageable directement)
-                const shareMsg = encodeURIComponent('J\'ai converti mon document "' + dlName + '" avec Convertisseur Express !');
-                const pageUrl = encodeURIComponent(window.location.href);
-                document.getElementById('waLink').href = 'https://wa.me/?text=' + shareMsg;
-                document.getElementById('tgLink').href = 'https://t.me/share/url?url=' + pageUrl + '&text=' + shareMsg;
+                const shareMsg = encodeURIComponent(
+    '📄 J\'ai converti mon document "' + dlName + '" avec Convertisseur Express !\n' +
+    '🔗 Essayez-le ici : https://convertisseur-express.com'
+);
+
+// ✅ WhatsApp : api.whatsapp.com fonctionne sur mobile ET desktop
+document.getElementById('waLink').href = 'https://api.whatsapp.com/send?text=' + shareMsg;
+
+// ✅ Telegram : on partage un vrai message utile (pas une URL localhost)
+document.getElementById('tgLink').href = 'https://t.me/share/url?url=' +
+    encodeURIComponent('https://convertisseur-express.com') +
+    '&text=' + shareMsg;
 
                 loader.style.display = 'none';
                 btn.disabled = false;
